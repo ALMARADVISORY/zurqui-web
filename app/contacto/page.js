@@ -35,37 +35,50 @@ export default function Contacto() {
                   +(34) 699912867
                 </a>
               </p>
+
+              <p>
+                <strong>Email:</strong>
+                <br />
+                <a href="mailto:direccion@almaradvisory.com">
+                  direccion@almaradvisory.com
+                </a>
+              </p>
             </div>
           </div>
         </section>
 
         <section className="section contactFormSection">
-          <form className="contactForm" action="/api/contacto" method="POST">
+          <form
+            className="contactForm"
+            action="mailto:direccion@almaradvisory.com"
+            method="POST"
+            encType="text/plain"
+          >
             <div className="formGrid">
               <label>
                 Nombre
-                <input type="text" name="nombre" placeholder="Tu nombre" required />
+                <input type="text" name="Nombre" placeholder="Tu nombre" required />
               </label>
 
               <label>
                 Empresa
-                <input type="text" name="empresa" placeholder="Empresa o proyecto" />
+                <input type="text" name="Empresa" placeholder="Empresa o proyecto" />
               </label>
 
               <label>
                 Email
-                <input type="email" name="email" placeholder="tu@email.com" required />
+                <input type="email" name="Email" placeholder="tu@email.com" required />
               </label>
 
               <label>
                 Telefono
-                <input type="tel" name="telefono" placeholder="Telefono de contacto" />
+                <input type="tel" name="Telefono" placeholder="Telefono de contacto" />
               </label>
             </div>
 
             <label>
               Area de interes
-              <select name="area" required>
+              <select name="Area de interes" required>
                 <option value="">Selecciona una opcion</option>
                 <option value="Asesoramiento financiero">Asesoramiento financiero</option>
                 <option value="Inversiones">Inversiones</option>
@@ -78,7 +91,7 @@ export default function Contacto() {
             <label>
               Mensaje
               <textarea
-                name="mensaje"
+                name="Mensaje"
                 rows="7"
                 placeholder="Cuentanos brevemente en que podemos ayudarte"
                 required
@@ -86,7 +99,7 @@ export default function Contacto() {
             </label>
 
             <label className="privacyCheck">
-              <input type="checkbox" name="privacidad" required />
+              <input type="checkbox" name="Privacidad aceptada" required />
               <span>He leido y acepto la politica de privacidad.</span>
             </label>
 
