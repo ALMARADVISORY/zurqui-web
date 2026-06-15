@@ -50,9 +50,9 @@ export default function Contacto() {
         <section className="section contactFormSection">
           <form
             className="contactForm"
-            action="mailto:direccion@almaradvisory.com"
+            action="/api/contacto"
             method="POST"
-            encType="text/plain"
+            
           >
             <div className="formGrid">
               <label>
