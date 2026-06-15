@@ -1,7 +1,9 @@
 ﻿import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-export default function Contacto() {
+export default function Contacto({ searchParams }) {
+  const enviado = searchParams?.enviado === "1";
+
   return (
     <>
       <Header />
@@ -15,6 +17,14 @@ export default function Contacto() {
               <p className="pageIntro">
                 Cuentanos que necesitas y valoraremos como podemos ayudarte en materia financiera, inversion, sinergias empresariales o asesoramiento inmobiliario.
               </p>
+
+              {enviado && (
+                <div className="successMessage">
+                  <strong>Gracias, hemos recibido tu mensaje.</strong>
+                  <br />
+                  En breve una persona de nuestro equipo se pondra en contacto contigo.
+                </div>
+              )}
             </div>
 
             <div className="contactInfo">
