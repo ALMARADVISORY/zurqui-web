@@ -1,66 +1,89 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Link from "next/link";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+    <>
+      <Header />
+
+      <main>
+        <section className="hero">
+          <div className="heroText">
+            <p className="tag">Zurqui Clouds</p>
+            <h1>Conectamos oportunidades, inversión y proyectos con sentido.</h1>
+            <p>
+              Acompañamos a empresas, inversores y profesionales en operaciones
+              financieras, sinergias empresariales y oportunidades inmobiliarias.
+            </p>
+
+            <div className="heroButtons">
+              <Link href="/servicios" className="button">
+                Ver servicios
+              </Link>
+              <Link href="/contacto" className="buttonSecondary">
+                Contactar
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        <section className="section">
+          <p className="tag">Qué hacemos</p>
+          <h2>Asesoramiento claro para tomar mejores decisiones.</h2>
+
+          <div className="cards">
+            <article className="card">
+              <h3>Asesoramiento financiero</h3>
+              <p>
+                Analizamos necesidades, objetivos y posibilidades para orientar
+                decisiones financieras de forma práctica.
+              </p>
+            </article>
+
+            <article className="card">
+              <h3>Inversiones</h3>
+              <p>
+                Ayudamos a valorar oportunidades de inversión y a ordenar la
+                información clave antes de tomar decisiones.
+              </p>
+            </article>
+
+            <article className="card">
+              <h3>Sinergias empresariales</h3>
+              <p>
+                Ponemos en contacto a empresas y profesionales para generar
+                colaboraciones, alianzas y nuevas oportunidades.
+              </p>
+            </article>
+
+            <article className="card">
+              <h3>Asesoramiento inmobiliario</h3>
+              <p>
+                Acompañamos en operaciones inmobiliarias, análisis de activos y
+                oportunidades relacionadas con patrimonio e inversión.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section className="cta">
+          <div>
+            <p className="tag">Herramienta</p>
+            <h2>Calculadora de préstamos</h2>
+            <p>
+              Utiliza nuestra calculadora para estimar cuotas mensuales de forma
+              rápida y sencilla.
+            </p>
+          </div>
+
+          <Link href="/calculadora-prestamos" className="button">
+            Abrir calculadora
+          </Link>
+        </section>
       </main>
-    </div>
+
+      <Footer />
+    </>
   );
 }
