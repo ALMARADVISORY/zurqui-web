@@ -1,18 +1,19 @@
 ﻿import "./globals.css";
-import CookieBanner from "./components/CookieBanner";
 
 export const metadata = {
   title: "Zurqui Clouds",
-  description: "Asesoramiento financiero, inversiones, sinergias empresariales y asesoramiento inmobiliario.",
+  description: "Conectamos oportunidades, inversión y proyectos con sentido.",
+  icons: {
+    icon: "/logo_zurqui.png",
+    shortcut: "/logo_zurqui.png",
+    apple: "/logo_zurqui.png",
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <body>
-        {children}
-        <CookieBanner />
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
