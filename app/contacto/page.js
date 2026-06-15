@@ -1,8 +1,9 @@
 ﻿import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-export default function Contacto({ searchParams }) {
-  const enviado = searchParams?.enviado === "1";
+export default async function Contacto({ searchParams }) {
+  const params = await searchParams;
+  const enviado = params?.enviado === "1";
 
   return (
     <>
