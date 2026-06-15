@@ -35,7 +35,7 @@ export async function POST(request) {
     `;
 
     const { error } = await resend.emails.send({
-      from: "Zurqui Clouds <onboarding@resend.dev>",
+      from: "Zurqui Clouds <contacto@zurquiclouds.com>",
       to: ["direccion@almaradvisory.com"],
       replyTo: email,
       subject: `Nuevo contacto web Zurqui Clouds - ${nombre}`,
